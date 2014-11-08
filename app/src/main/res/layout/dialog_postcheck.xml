@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/tagid_prompt"
+        android:text="Tag Id #: "
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tagid_input" />
+    <TextView
+        android:id="@+id/tagid_input"
+        android:text="Corresponding Tag Information"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tagid_prompt"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/notes_prompt"
+        android:text="Notes: "
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/notes_input"
+        android:layout_alignLeft="@+id/tagid_input"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:id="@+id/notes_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/notes_prompt"
+        android:layout_below="@id/tagid_input"
+        android:hint="What's up?" />
+
+    <TextView
+        android:id="@+id/status_prompt"
+        android:text="Status: "
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/status_spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Spinner
+        android:id="@+id/status_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notes_input"
+        android:layout_alignLeft="@id/notes_input"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/status_array"
+        android:prompt="@string/status_prompt" />
+
+</RelativeLayout>
